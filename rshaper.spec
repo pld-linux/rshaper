@@ -7,13 +7,15 @@
 Summary:	Linux kernel module for network shaping
 Summary(pl):	Modu³ j±dra Linuksa do ograniczania pasma w sieci
 Name:		rshaper
-Version:	2.01
-%define	rel	2
+Version:	031217
+Epoch:		1
+%define rel 1
 Release:	%{rel}
 License:	GPL
 Group:		Base/Kernel
-Source0:	http://ar.linux.it/pub/rshaper/%{name}-%{version}.tar.gz
-# Source0-md5:	a246d0364e5ca3de8199a0f83b758534
+#SourceX:	http://ar.linux.it/pub/rshaper/%{name}-%{version}.tar.gz
+Source0:	http://ar.linux.it/pub/rshaper/CVS-snapshots/%{name}-snapshot-%{version}.tar.gz
+# Source0-md5:	bfaecb170fc2fae24f2ae4109d7bceaf
 Patch0:		%{name}-Makefile.patch
 URL:		http://ar.linux.it/software/#rshaper
 %if %{with kernel} && %{with dist_kernel}
@@ -25,14 +27,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 rshaper is a module for versions 2.0, 2.2 and 2.4 of the Linux kernel,
 it is meant to limit the incoming bandwidth for packets aimed at
-different hosts. 
+different hosts/ports. 
 
 This package contains userspace utility to control rshaper module.
 
 %description -l pl
 rshaper to modu³ dla j±der Linuksa w wersjach 2.0, 2.2 i 2.4, s³u¿±cy
 do ograniczania pasma przychodz±cych pakietów przeznaczonych dla
-ró¿nych hostów.
+ró¿nych hostów/portów.
 
 Ten pakiet zawiera narzêdzie do sterowania modu³em rshaper.
 
@@ -67,7 +69,7 @@ Linux kernel module for network shaping.
 Modu³ j±dra Linuksa do ograniczania pasma w sieci.
 
 %prep
-%setup -q
+%setup -q -n %{name}-snapshot-%{version}
 %patch0 -p1
 
 %build
