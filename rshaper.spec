@@ -3,7 +3,7 @@ Summary:	Linux kernel module for network shaping
 Summary(pl):	Modu³ j±dra Linuksa do ograniczania pasma w sieci
 Name:		rshaper
 Version:	2.01
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base/Kernel
 Source0:	http://ar.linux.it/pub/rshaper/%{name}-%{version}.tar.gz
@@ -27,6 +27,7 @@ dla ró¿nych hostów.
 %patch0 -p1
 
 %build
+%{__make} clean
 %{__make}
 
 %install
