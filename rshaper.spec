@@ -37,6 +37,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	VERSION="%{_kernel_ver}"
 
+
+%post
+/sbin/depmod
+%postun
+/sbin/depmod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
