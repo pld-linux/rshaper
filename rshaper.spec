@@ -117,12 +117,16 @@ rm -rf $RPM_BUILD_ROOT
 %postun -n kernel-smp-misc-rshaper
 %depmod %{_kernel_ver}smp
 
+%if %{with userspace}
 %files
 %defattr(644,root,root,755)
 %doc README README.locks TODO
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
 
+%endif
+
+%if %{with kernel}
 %files -n kernel-misc-rshaper
 %defattr(644,root,root,755)
 /lib/modules/%{_kernel_ver}/misc/rshaper.o*
@@ -130,3 +134,4 @@ rm -rf $RPM_BUILD_ROOT
 %files -n kernel-smp-misc-rshaper
 %defattr(644,root,root,755)
 /lib/modules/%{_kernel_ver}smp/misc/rshaper.o*
+%endif
