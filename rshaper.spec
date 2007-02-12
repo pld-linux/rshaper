@@ -5,7 +5,7 @@
 %bcond_without	userspace	# without userspace packages
 #
 Summary:	Linux kernel module for network shaping
-Summary(pl.UTF-8):   Moduł jądra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):	Moduł jądra Linuksa do ograniczania pasma w sieci
 Name:		rshaper
 Version:	031217
 Epoch:		1
@@ -40,7 +40,7 @@ Ten pakiet zawiera narzędzie do sterowania modułem rshaper.
 
 %package -n kernel-misc-rshaper
 Summary:	Linux kernel module for network shaping
-Summary(pl.UTF-8):   Moduł jądra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):	Moduł jądra Linuksa do ograniczania pasma w sieci
 Group:		Base/Kernel
 Release:	%{rel}@%{_kernel_ver_str}
 %{?with_dist_kernel:%requires_releq_kernel_up}
@@ -55,7 +55,7 @@ Moduł jądra Linuksa do ograniczania pasma w sieci.
 
 %package -n kernel-smp-misc-rshaper
 Summary:	Linux kernel module for network shaping
-Summary(pl.UTF-8):   Moduł jądra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):	Moduł jądra Linuksa do ograniczania pasma w sieci
 Group:		Base/Kernel
 Release:	%{rel}@%{_kernel_ver_str}
 %{?with_dist_kernel:%requires_releq_kernel_smp}
