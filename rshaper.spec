@@ -5,7 +5,7 @@
 %bcond_without	userspace	# without userspace packages
 #
 Summary:	Linux kernel module for network shaping
-Summary(pl):	Modu³ j±dra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):   ModuÅ‚ jÄ…dra Linuksa do ograniczania pasma w sieci
 Name:		rshaper
 Version:	031217
 Epoch:		1
@@ -31,16 +31,16 @@ different hosts/ports.
 
 This package contains userspace utility to control rshaper module.
 
-%description -l pl
-rshaper to modu³ dla j±der Linuksa w wersjach 2.0, 2.2 i 2.4, s³u¿±cy
-do ograniczania pasma przychodz±cych pakietów przeznaczonych dla
-ró¿nych hostów/portów.
+%description -l pl.UTF-8
+rshaper to moduÅ‚ dla jÄ…der Linuksa w wersjach 2.0, 2.2 i 2.4, sÅ‚uÅ¼Ä…cy
+do ograniczania pasma przychodzÄ…cych pakietÃ³w przeznaczonych dla
+rÃ³Å¼nych hostÃ³w/portÃ³w.
 
-Ten pakiet zawiera narzêdzie do sterowania modu³em rshaper.
+Ten pakiet zawiera narzÄ™dzie do sterowania moduÅ‚em rshaper.
 
 %package -n kernel-misc-rshaper
 Summary:	Linux kernel module for network shaping
-Summary(pl):	Modu³ j±dra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):   ModuÅ‚ jÄ…dra Linuksa do ograniczania pasma w sieci
 Group:		Base/Kernel
 Release:	%{rel}@%{_kernel_ver_str}
 %{?with_dist_kernel:%requires_releq_kernel_up}
@@ -50,12 +50,12 @@ Requires:	%{name} = %{version}-%{rel}
 %description -n kernel-misc-rshaper
 Linux kernel module for network shaping.
 
-%description -n kernel-misc-rshaper -l pl
-Modu³ j±dra Linuksa do ograniczania pasma w sieci.
+%description -n kernel-misc-rshaper -l pl.UTF-8
+ModuÅ‚ jÄ…dra Linuksa do ograniczania pasma w sieci.
 
 %package -n kernel-smp-misc-rshaper
 Summary:	Linux kernel module for network shaping
-Summary(pl):	Modu³ j±dra Linuksa do ograniczania pasma w sieci
+Summary(pl.UTF-8):   ModuÅ‚ jÄ…dra Linuksa do ograniczania pasma w sieci
 Group:		Base/Kernel
 Release:	%{rel}@%{_kernel_ver_str}
 %{?with_dist_kernel:%requires_releq_kernel_smp}
@@ -65,8 +65,8 @@ Requires:	%{name} = %{version}-%{rel}
 %description -n kernel-smp-misc-rshaper
 Linux kernel module for network shaping.
 
-%description -n kernel-smp-misc-rshaper -l pl
-Modu³ j±dra Linuksa do ograniczania pasma w sieci.
+%description -n kernel-smp-misc-rshaper -l pl.UTF-8
+ModuÅ‚ jÄ…dra Linuksa do ograniczania pasma w sieci.
 
 %prep
 %setup -q -n %{name}-snapshot-%{version}
